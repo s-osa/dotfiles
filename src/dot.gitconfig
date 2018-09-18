@@ -1,0 +1,19 @@
+[user]
+  name = OSA Shunsuke
+  email = hhelibebcnofnenamg@gmail.com
+[core]
+  editor = vim
+  autocrlf = input
+[color]
+  ui = auto
+[push]
+  default = simple
+[credential]
+  helper = osxkeychain
+[alias]
+  s = status
+  co = checkout
+  a = add .
+
+[ghq]
+  root = ~/src
