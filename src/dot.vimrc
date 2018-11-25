@@ -10,6 +10,8 @@ set tabstop=2
 set scrolloff=10
 set backspace=eol,indent,start
 set showcmd
+set modeline
+set modelines=5
 
 " Search
 set ignorecase
