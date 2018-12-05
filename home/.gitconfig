@@ -15,11 +15,3 @@
   s = status
   co = checkout
   a = add .
-
-[ghq]
-  root = ~/src
-
-[includeIf "gitdir:~/src/ghe.ckpd.co/"]
-	path = ~/.gitconfig.cookpad
-[includeIf "gitdir:~/src/github.com/cookpad/"]
-	path = ~/.gitconfig.cookpad
