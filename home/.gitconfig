@@ -15,6 +15,7 @@
   s = status
   co = checkout
   a = add .
+  d = diff
 
 [includeIf "gitdir:~/src/github.com/agrigate-team/"]
 	path = ~/.gitconfig.agrigate
