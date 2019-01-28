@@ -4,7 +4,6 @@
 --skip-active-storage
 --skip-bundle
 --skip-coffee
---skip-javascript
 --skip-keeps
 --skip-spring
 --skip-system-test
