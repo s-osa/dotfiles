@@ -15,8 +15,12 @@
   s = status
   co = checkout
   a = add .
+  ap = add -p
   d = diff
   dc = diff --cached
+  amend = commit --amend
+  l = log
+  lp = log -p
 
 [includeIf "gitdir:~/src/github.com/agrigate-team/"]
 	path = ~/.gitconfig.agrigate
