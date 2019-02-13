@@ -17,7 +17,7 @@ function fish_prompt --description 'Write out the prompt'
     set prompt_color red
   end
 
-  printf "%s%s %s " (set_color cyan) $pwd (set_color $prompt_color)'❯❯❯'
+  printf "%s%s%s " (set_color cyan) $pwd\n (set_color $prompt_color)'❯❯❯'
 
   set_color normal
 end
