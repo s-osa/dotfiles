@@ -21,6 +21,7 @@
   amend = commit --amend
   l = log
   lp = log -p
+  b = branch
 
 [includeIf "gitdir:~/src/github.com/agrigate-team/"]
 	path = ~/.gitconfig.agrigate
