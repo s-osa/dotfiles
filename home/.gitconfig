@@ -11,6 +11,8 @@
   default = simple
 [credential]
   helper = osxkeychain
+[ghq]
+  root = /Users/osa/src
 [alias]
   s = status
   co = checkout
