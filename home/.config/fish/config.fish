@@ -1,6 +1,9 @@
 # rbenv
 status --is-interactive; and source (rbenv init -|psub)
 
+# nodenv
+status --is-interactive; and source (nodenv init -|psub)
+
 # Bootstrap installation for fisher
 if not functions -q fisher
     set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
