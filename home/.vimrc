@@ -12,6 +12,8 @@ set backspace=eol,indent,start
 set showcmd
 set modeline
 set modelines=5
+set visualbell t_vb=
+set noerrorbells
 
 " Search
 set ignorecase
