@@ -1,6 +1,9 @@
 #!/bin/bash
 
 FILES=$(cat << FILES
+.ideavimrc
+.gitignore
+.vimrc
 FILES
 )
 
