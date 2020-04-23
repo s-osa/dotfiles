@@ -12,7 +12,7 @@
 [credential]
   helper = osxkeychain
 [ghq]
-  root = /Users/osa/src
+  root = ~/src
 [alias]
   s = status
   co = checkout
