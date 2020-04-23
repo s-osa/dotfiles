@@ -25,5 +25,8 @@
   lp = log -p
   b = branch
 
+[include]
+  path = ~/.gitconfig.local
+
 [includeIf "gitdir:~/src/github.com/agrigate-team/"]
 	path = ~/.gitconfig.agrigate
