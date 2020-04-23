@@ -2,6 +2,8 @@
 
 FILES=$(cat << FILES
 .ideavimrc
+.gitconfig
+.gitconfig.agrigate
 .gitignore
 .vimrc
 FILES
