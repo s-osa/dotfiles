@@ -6,6 +6,7 @@ FILES=$(cat << FILES
 .gitconfig
 .gitconfig.agrigate
 .gitignore
+.tmux.conf
 .vimrc
 FILES
 )
