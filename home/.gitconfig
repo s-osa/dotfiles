@@ -24,6 +24,7 @@
   l = log
   lp = log -p
   b = branch
+  bd = branch -d
 
 [include]
   path = ~/.gitconfig.local
