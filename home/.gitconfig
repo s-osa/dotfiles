@@ -1,5 +1,5 @@
 [user]
-  name = OSA Shunsuke
+  name = Shunsuke Osa
   email = hhelibebcnofnenamg@gmail.com
 [core]
   editor = vim
@@ -16,6 +16,7 @@
 [alias]
   s = status
   co = checkout
+  cob = checkout -b
   a = add .
   ap = add -p
   d = diff
