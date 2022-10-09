@@ -1,21 +1,24 @@
 #!/bin/bash
 
+TEXT_BOLD=$(printf "\e[1m")
+TEXT_RED=$(printf "\e[31m")
+TEXT_GREEN=$(printf "\e[32m")
+TEXT_YELLOW=$(printf "\e[33m")
+TEXT_RESET=$(printf "\e[m")
+
+# Create symlinks to the config files
+
 FILES=$(cat << FILES
-.ideavimrc
 .gitconfig
 .gitconfig.agrigate
 .gitignore
+.ideavimrc
 .tmux.conf
 .vimrc
 FILES
 )
 
-COLOR_RED=$(printf "\e[31m")
-COLOR_GREEN=$(printf "\e[32m")
-COLOR_YELLOW=$(printf "\e[33m")
-COLOR_RESET=$(printf "\e[m")
-
-# Create symlink
+echo "${TEXT_BOLD}=== Generate symlinks${TEXT_RESET}"
 
 for file in $FILES
 do
@@ -23,37 +26,41 @@ do
   link_source_path=$HOME/$file
 
   if [ ! -e $link_destination_path ]; then
-    echo "${COLOR_RED}Error:    ${link_destination_path} does not exist!${COLOR_RESET}"
+    echo "${TEXT_RED}Error:    ${link_destination_path} does not exist!${TEXT_RESET}"
   elif [ ! -e $link_source_path ]; then
-    echo "${COLOR_GREEN}Symlink:  ${link_source_path} => ${link_destination_path}${COLOR_RESET}"
+    echo "${TEXT_GREEN}Symlink:  ${link_source_path} => ${link_destination_path}${TEXT_RESET}"
     ln -s $link_destination_path $link_source_path
   elif [ ! -L $link_source_path ]; then
-    echo "${COLOR_YELLOW}Conflict: ${link_source_path} already exists (not changed)${COLOR_RESET}"
+    echo "${TEXT_YELLOW}Conflict: ${link_source_path} already exists (not changed)${TEXT_RESET}"
   elif [ $(readlink $link_source_path) != $link_destination_path ]; then
     current_destination_path=$(readlink $link_source_path)
-    echo "${COLOR_YELLOW}Conflict: ${link_source_path} already exists (not changed)${COLOR_RESET}"
+    echo "${TEXT_YELLOW}Conflict: ${link_source_path} already exists (not changed)${TEXT_RESET}"
   else
     echo "Existing: ${link_source_path} => ${link_destination_path}"
   fi
 done
 
-# Copy dummy local files if not exists
+# Generate skeleton files for local config
 
-DUMMY_FILES=$(cat << FILES
+SKELETON_FILES=$(cat << FILES
 .gitconfig.local
 FILES
 )
 
-for file in $DUMMY_FILES
+echo "${TEXT_BOLD}=== Generate skeleton files${TEXT_RESET}"
+
+for file in $SKELETON_FILES
 do
-  dummy_file_path=$PWD/home/$file
+  skeleton_file_path=$PWD/home/$file
   local_file_path=$HOME/$file
 
-  if [ ! -e $dummy_file_path ]; then
-    echo "${COLOR_RED}Error:    ${dummy_file_path} does not exist!${COLOR_RESET}"
+  if [ ! -e $skeleton_file_path ]; then
+    echo "${TEXT_RED}Error:    Source file ${skeleton_file_path} does not exist!${TEXT_RESET}"
   elif [ ! -e $local_file_path ]; then
-    echo "${COLOR_GREEN}Generate:  ${local_filelink_source_path} => ${link_destination_path}${COLOR_RESET}"
-    cp $dummy_file_path $local_file_path
+    echo "${TEXT_GREEN}Generate: ${link_destination_path}${TEXT_RESET}"
+    cp $skeleton_file_path $local_file_path
+  else
+    echo "Existing: ${local_file_path}"
   fi
 done
 

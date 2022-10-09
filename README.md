@@ -1,12 +1,18 @@
 # dotfiles
 
-- IdeaVim
-- fish
-- ghq
+## Setup
+
+```sh
+./setup
+```
+
+Setup script is idempotent.
+
+## Prerequisites
+
 - git
-- karabiner-elements
-- peco
-- tmux
-    - [tpm](https://github.com/tmux-plugins/tpm)
-        - [tmux-open](https://github.com/tmux-plugins/tmux-open)
+    - ghq
+- IdeaVim
+- tmux with [tpm](https://github.com/tmux-plugins/tpm)
+    - [tmux-open](https://github.com/tmux-plugins/tmux-open)
 - vim
