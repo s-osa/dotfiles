@@ -15,6 +15,7 @@ FILES=$(cat << FILES
 .ideavimrc
 .tmux.conf
 .vimrc
+.config/karabiner/karabiner.json
 FILES
 )
 
@@ -24,6 +25,10 @@ for file in $FILES
 do
   link_destination_path=$PWD/home/$file
   link_source_path=$HOME/$file
+
+  if [ $(dirname $file) != "." ] ; then
+    mkdir -p $(dirname $link_source_path)
+  fi
 
   if [ ! -e $link_destination_path ]; then
     echo "${TEXT_RED}Error:    ${link_destination_path} does not exist!${TEXT_RESET}"
