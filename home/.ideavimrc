@@ -5,3 +5,4 @@ let mapleader=" "
 
 """ Mappings --------------------------------
 map <Leader>a <Action>(Annotate)
+map <Leader>o <Action>(Github.Open.In.Browser)
