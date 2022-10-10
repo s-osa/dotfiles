@@ -15,6 +15,7 @@ FILES=$(cat << FILES
 .ideavimrc
 .tmux.conf
 .vimrc
+.config/fish/functions
 .config/karabiner/karabiner.json
 FILES
 )
