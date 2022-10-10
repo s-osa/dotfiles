@@ -1,1 +1,7 @@
 source ~/.vimrc
+
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Mappings --------------------------------
+map <Leader>a <Action>(Annotate)
