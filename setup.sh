@@ -15,6 +15,7 @@ FILES=$(cat << FILES
 .ideavimrc
 .tmux.conf
 .vimrc
+.config/fish/config.fish
 .config/fish/functions
 .config/karabiner/karabiner.json
 FILES
@@ -50,6 +51,7 @@ done
 
 SKELETON_FILES=$(cat << FILES
 .gitconfig.local
+.config/fish/config.fish.local
 FILES
 )
 
@@ -63,7 +65,7 @@ do
   if [ ! -e $skeleton_file_path ]; then
     echo "${TEXT_RED}Error:    Source file ${skeleton_file_path} does not exist!${TEXT_RESET}"
   elif [ ! -e $local_file_path ]; then
-    echo "${TEXT_GREEN}Generate: ${link_destination_path}${TEXT_RESET}"
+    echo "${TEXT_GREEN}Generate: ${local_file_path}${TEXT_RESET}"
     cp $skeleton_file_path $local_file_path
   else
     echo "Existing: ${local_file_path}"
