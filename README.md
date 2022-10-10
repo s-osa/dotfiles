@@ -3,7 +3,7 @@
 ## Setup
 
 ```sh
-./setup
+./setup.sh
 ```
 
 Setup script is idempotent.
