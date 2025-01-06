@@ -19,6 +19,8 @@
   s = status
   co = checkout
   cob = checkout -b
+  sw = switch
+  swc = switch -c
   a = add .
   ap = add -p
   d = diff
