@@ -1,3 +1,5 @@
+setopt IGNORE_EOF
+
 function history-search-peco() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
     CURSOR=$#BUFFER
