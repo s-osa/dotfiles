@@ -6,3 +6,7 @@ function history-search-peco() {
 
 zle -N history-search-peco
 bindkey '^R' history-search-peco
+
+repo () {
+  cd "$( ghq list --full-path | peco)"
+}
