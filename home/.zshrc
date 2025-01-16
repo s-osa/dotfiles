@@ -10,5 +10,11 @@ zle -N history-search-peco
 bindkey '^R' history-search-peco
 
 repo () {
-  cd "$( ghq list --full-path | peco)"
+  repository="$( ghq list | peco )"
+  if [[ -n $repository ]]; then
+    fullpath="$( ghq root )/$repository"
+    cd $fullpath
+  else
+    echo "No repository selected."
+  fi
 }
