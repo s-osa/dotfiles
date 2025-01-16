@@ -1,4 +1,11 @@
 setopt IGNORE_EOF
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_DUPS
+
+export HISTFILE=$HOME/.zhistory
+export HISTSIZE=100000
+export SAVEHIST=100000
 
 function history-search-peco() {
     BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
