@@ -7,5 +7,5 @@ opacity = 0.9
 history = 30000
 
 [font]
-size = 14
+size = 16
 offset = { y = 4 }
