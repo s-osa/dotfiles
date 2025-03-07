@@ -1,4 +1,5 @@
 home/.config/fish/fish_variables
+home/.config/gh/
 home/.config/jgit/
 home/.config/karabiner/automatic_backups/
 *.bak

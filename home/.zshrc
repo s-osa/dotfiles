@@ -26,6 +26,24 @@ repo () {
   fi
 }
 
+gsw () {
+  branch="$( git branch --format '%(refname:short)' | peco )"
+  if [[ -n $branch ]]; then
+    git switch $branch
+  else
+    echo "No branch selected."
+  fi
+}
+
+gbd () {
+  branch="$( git branch --format '%(refname:short)' | peco )"
+  if [[ -n $branch ]]; then
+    git branch -d $branch
+  else
+    echo "No branch selected."
+  fi
+}
+
 zellij_tab_name_update() {
   if [[ -n $ZELLIJ ]]; then
     tab_name=''
