@@ -71,3 +71,4 @@ export PATH="~/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 eval "$(starship init zsh)"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
