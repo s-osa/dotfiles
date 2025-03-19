@@ -8,9 +8,9 @@ export HISTSIZE=100000
 export SAVEHIST=100000
 
 function history-search-peco() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
+  BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+  CURSOR=$#BUFFER
+  zle reset-prompt
 }
 
 zle -N history-search-peco
