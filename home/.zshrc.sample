@@ -1,1 +1,1 @@
-source ./.zshrc.common
+source .config/.zshrc.common
