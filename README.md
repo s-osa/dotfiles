@@ -18,6 +18,9 @@ macOS 環境のセットアップと設定ファイル管理。[chezmoi](https:/
 # chezmoi をインストールして初期化
 brew install chezmoi
 chezmoi init --apply s-osa
+
+# 依存パッケージをインストール
+brew bundle --global
 ```
 
 ### 既存マシンの更新
@@ -31,8 +34,19 @@ chezmoi update
 ```
 .
 ├── .chezmoi.toml.tmpl  # chezmoi 設定テンプレート
-└── ...                 # 管理対象の設定ファイル
+├── dot_*               # 管理対象の設定ファイル
+└── create_dot_*        # 初回のみ生成されるファイル
 ```
+
+## マシン固有設定
+
+以下のファイルは `create_` プレフィックスにより初回のみ生成され、chezmoi 管理外となります。マシン固有の設定はこれらに記述してください。
+
+| ファイル | 用途 |
+|----------|------|
+| `~/.gitconfig.local` | Git のマシン固有設定（includeIf 等） |
+| `~/.zshrc.local` | シェルのマシン固有設定（PATH, alias 等） |
+| `~/.zprofile.local` | ログインシェルのマシン固有設定 |
 
 ## 基本操作
 
