@@ -1,6 +1,7 @@
 brew "gh"
 brew "ghq"
 brew "git"
+brew "k1low/tap/git-wt"
 brew "mas"
 brew "peco"
 brew "starship"
