@@ -1,2 +1,13 @@
 # Alacritty configuration
 # https://alacritty.org/config-alacritty.html
+
+[font]
+size = 14
+
+[window]
+option_as_alt = "Both"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

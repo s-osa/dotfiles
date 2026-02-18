@@ -95,6 +95,8 @@ zellij_tab_name_update() {
 zellij_tab_name_update
 chpwd_functions+=(zellij_tab_name_update)
 
+alias cc="claude"
+
 command -v starship &>/dev/null && eval "$(starship init zsh)"
 
 if [[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
