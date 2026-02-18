@@ -1,0 +1,5 @@
+brew "ghq"
+brew "peco"
+brew "starship"
+brew "zsh-autosuggestions"
+brew "zellij"
