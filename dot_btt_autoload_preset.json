@@ -1,0 +1,59 @@
+{
+  "BTTPresetCreatorNotes" : "",
+  "BTTPresetInfoURL" : "",
+  "BTTPresetName" : "Default",
+  "BTTPresetColor" : "35.330250, 115.827800, 207.825000, 255.000000",
+  "BTTPresetUUID" : "CD4E7115-FA89-4BA3-A585-2AC5488AA1B5",
+  "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "BT.G",
+      "BTTAppName" : "Global",
+      "BTTAppAutoInvertIcon" : 1,
+      "BTTAppSpecificSettings" : {
+        "BTTDisableGlobalTriggers" : false
+      },
+      "BTTTriggers" : [
+        {
+          "BTTActionCategory" : 0,
+          "BTTLastUpdatedAt" : 1713752722.8089941,
+          "BTTTriggerType" : 113,
+          "BTTTriggerTypeDescriptionReadOnly" : "TipTap Left (1 Finger Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTUUID" : "26675511-DD0E-4D02-BD85-B2B626B5A100",
+          "BTTLayoutIndependentActionChar" : "[",
+          "BTTShortcutToSend" : "56,55,33",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 1
+        },
+        {
+          "BTTActionCategory" : 0,
+          "BTTLastUpdatedAt" : 1713752722.8089859,
+          "BTTTriggerType" : 114,
+          "BTTTriggerTypeDescriptionReadOnly" : "TipTap Right (1 Finger Fix)",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTUUID" : "E3F18CF5-CE2E-40E4-A84A-9A5B78C3EF89",
+          "BTTLayoutIndependentActionChar" : "]",
+          "BTTShortcutToSend" : "56,55,30",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 2
+        },
+        {
+          "BTTActionCategory" : 0,
+          "BTTLastUpdatedAt" : 1713752722.8089991,
+          "BTTTriggerType" : 107,
+          "BTTTriggerTypeDescriptionReadOnly" : "4 Finger Swipe Down",
+          "BTTTriggerClass" : "BTTTriggerTypeTouchpadAll",
+          "BTTUUID" : "80CDC328-89CE-4DED-AE68-E294EA52593E",
+          "BTTLayoutIndependentActionChar" : "w",
+          "BTTShortcutToSend" : "55,13",
+          "BTTEnabled" : 1,
+          "BTTEnabled2" : 1,
+          "BTTOrder" : 0
+        }
+      ]
+    }
+  ],
+  "BTTPresetSnapAreas" : []
+}
