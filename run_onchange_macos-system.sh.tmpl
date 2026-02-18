@@ -1,6 +1,5 @@
 #!/bin/bash
-
-# macOS system settings
+# hash: {{ include "run_onchange_macos-system.sh.tmpl" | sha256sum }}
 
 # Create screenshots directory
 mkdir -p ~/screenshots
@@ -40,4 +39,4 @@ defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
 # Restart affected applications
 killall Dock 2>/dev/null || true
 
-echo "macOS defaults configured. Some settings may require logout/restart."
+echo "macOS system defaults configured. Some settings may require logout/restart."

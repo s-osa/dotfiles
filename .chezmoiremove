@@ -1,1 +1,4 @@
 .gitignore
+.gitconfig.local
+.zshrc.local
+.zprofile.local

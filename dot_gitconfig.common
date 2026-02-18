@@ -37,5 +37,3 @@
     b = branch
     bd = branch -d
 
-[include]
-    path = ~/.gitconfig.local
