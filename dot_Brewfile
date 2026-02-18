@@ -26,7 +26,7 @@ cask "spotify"
 cask "superwhisper"
 cask "swinsian"
 cask "tageditor"
-cask "todoist"
+cask "todoist-app"
 cask "visual-studio-code"
 cask "xld"
 
