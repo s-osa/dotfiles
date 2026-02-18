@@ -1,0 +1,5 @@
+# Machine-specific git config
+# Example:
+# [includeIf "gitdir:~/src/ghe.example.com/"]
+#     [user]
+#         email = you@example.com

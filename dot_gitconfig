@@ -1,0 +1,41 @@
+[user]
+    name = Osa Shunsuke
+    email = hhelibebcnofnenamg@gmail.com
+
+[core]
+    editor = vim
+    autocrlf = input
+
+[color]
+    ui = auto
+
+[push]
+    default = simple
+
+[pull]
+    rebase = false
+
+[credential]
+    helper = osxkeychain
+
+[ghq]
+    root = ~/src
+
+[alias]
+    s = status
+    co = checkout
+    cob = checkout -b
+    sw = switch
+    swc = switch -c
+    a = add .
+    ap = add -p
+    d = diff
+    dc = diff --cached
+    amend = commit --amend
+    l = log
+    lp = log -p
+    b = branch
+    bd = branch -d
+
+[include]
+    path = ~/.gitconfig.local
