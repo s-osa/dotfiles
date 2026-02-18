@@ -1,0 +1,13 @@
+set number
+set scrolloff=10
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+noremap ; :
+noremap : ;
+
+let mapleader=" "
+map <Leader>a <Action>(Annotate)
+map <Leader>o <Action>(Github.Open.In.Browser)
