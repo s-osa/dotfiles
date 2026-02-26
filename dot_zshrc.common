@@ -48,17 +48,16 @@ gwt () {
   if [[ -n $1 ]]; then
     local main_root="$(git rev-parse --show-toplevel)"
     local main_settings="$main_root/.claude/settings.local.json"
-    local wt_path="$(git wt "$1" | tail -1)"
-    cd "$wt_path"
+    git wt "$1"
     if [[ -f "$main_settings" ]]; then
       mkdir -p .claude
       ln -sf "$main_settings" .claude/settings.local.json
       echo "Claude settings linked: .claude/settings.local.json -> $main_settings"
     fi
   else
-    local wt_path="$( git wt | tail -n +2 | peco | awk '{print $1}' )"
-    if [[ -n $wt_path ]]; then
-      cd "$wt_path"
+    local branch="$( command git wt | tail -n +2 | peco | awk '{print $(NF-1)}' )"
+    if [[ -n $branch ]]; then
+      git wt "$branch"
     else
       echo "No worktree selected."
     fi
@@ -66,7 +65,7 @@ gwt () {
 }
 
 gwd () {
-  branch="$( git wt | tail -n +2 | peco | awk '{print $(NF-1)}' )"
+  branch="$( command git wt | tail -n +2 | peco | awk '{print $(NF-1)}' )"
   if [[ -n $branch ]]; then
     git wt -d $branch
   else
@@ -99,6 +98,7 @@ chpwd_functions+=(zellij_tab_name_update)
 alias cc="claude"
 
 command -v starship &>/dev/null && eval "$(starship init zsh)"
+command -v git-wt &>/dev/null && eval "$(git-wt --init zsh)"
 
 if [[ -f $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
   source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
