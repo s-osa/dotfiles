@@ -1,4 +1,52 @@
 {
+  "permissions": {
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.config/1Password/**)",
+      "Edit(~/.ssh/**)",
+      "Edit(~/.gnupg/**)",
+      "Write(~/.ssh/**)",
+      "Write(~/.gnupg/**)"
+    ],
+    "allow": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Bash(ls)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(wc *)",
+      "Bash(file *)",
+      "Bash(stat *)",
+      "Bash(find *)",
+      "Bash(fd *)",
+      "Bash(rg *)",
+      "Bash(jq *)",
+      "Bash(git status)",
+      "Bash(git status *)",
+      "Bash(git log *)",
+      "Bash(git diff)",
+      "Bash(git diff *)",
+      "Bash(git show *)",
+      "Bash(git stash list)",
+      "Bash(git stash list *)",
+      "Bash(* --version)",
+      "Bash(* --help)",
+      "Bash(* --help *)",
+      "Bash(which *)",
+      "Bash(type *)",
+      "Bash(echo *)",
+      "Bash(curl --head *)",
+      "Bash(curl -I *)",
+      "Bash(ping *)",
+      "Bash(nslookup *)",
+      "Bash(dig *)",
+      "Bash(host *)"
+    ]
+  },
   "hooks": {
     "PermissionRequest": [
       {
