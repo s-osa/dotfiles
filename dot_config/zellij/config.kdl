@@ -1,1 +1,12 @@
 default_mode "locked"
+
+themes {
+    default {
+        frame_selected {
+            base 25 171 162
+        }
+        frame_unselected {
+            base 80 80 80
+        }
+    }
+}
