@@ -16,9 +16,9 @@ macOS 環境のセットアップと設定ファイル管理。[chezmoi](https:/
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # chezmoi をインストールして初期化・適用
-# .chezmoi.toml.tmpl に sourceDir が設定されているため、ghq 互換のパスに自動的に clone される
+# ghq 互換のパスに clone するため --source で明示的に指定する
 brew install chezmoi
-chezmoi init --apply s-osa
+chezmoi init --apply --source ~/src/github.com/s-osa/dotfiles s-osa
 
 # 依存パッケージをインストール
 brew bundle --global
