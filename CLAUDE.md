@@ -32,13 +32,13 @@ brew bundle --global
 | Prefix | Behavior |
 |---|---|
 | `dot_` | Deployed as a dotfile (e.g. `dot_vimrc` → `~/.vimrc`) |
-| `create_once_dot_` | Created once, never overwritten again |
+| `create_dot_` | Created once if missing, never overwritten (e.g. `create_dot_zshrc` → `~/.zshrc`) |
 | `run_onchange_*.sh.tmpl` | Script run whenever its content changes |
 
 ### Two-tier Config Pattern
 
 The `.common` suffix pattern (e.g. `dot_zshrc.common`, `dot_gitconfig.common`) is intentional:
-- `create_once_dot_zshrc` → `~/.zshrc` (entry point, created once, allows machine-specific additions and external tool auto-appends)
+- `create_dot_zshrc` → `~/.zshrc` (entry point, created once, allows machine-specific additions and external tool auto-appends)
 - `dot_zshrc.common` → `~/.zshrc.common` (always synced from this repo, sourced by `~/.zshrc`)
 
 This allows tools like Rancher Desktop and `mise` to append to `~/.zshrc` without conflicting with chezmoi.
