@@ -1,4 +1,6 @@
+brew "awscli"
 brew "direnv"
+brew "envchain"
 brew "gh"
 brew "ghq"
 brew "git"
