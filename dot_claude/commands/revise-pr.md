@@ -20,7 +20,7 @@ $ARGUMENTS
 
 2. **レビューコメントの収集**
 
-   - `gh pr view --comments` や `gh api` でレビューコメントをすべて取得する
+   - GitHub MCP でレビューコメント（issue コメント・review コメント・review 本体）をすべて取得する
    - インラインコメント（コードの特定行への指摘）も含める
    - 対応済みのコメント（resolved / outdated / 自分が返信済みのもの）は除外する
    - コメントごとに以下を整理する:
